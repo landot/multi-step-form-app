@@ -1,0 +1,50 @@
+
+.text-input p {
+    font-weight: 400;
+    font-size: 14px;
+    color: #022959;
+    margin: 0;
+}
+
+.text-input input {
+    color: #022959;
+    font-weight: 500;
+    font-size: 16px;
+    background: #FFFFFF;
+    border: 1px solid #D6D9E6;
+    border-radius: 8px;
+    height: 48px;
+    width: 100%;
+    padding: 15px;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
+.text-input input::placeholder {
+    color: #9699AA;
+}
+
+.text-input input:focus {
+    outline: none;
+    border: 1px solid #483EFF;
+}
+
+.text-input.error input:focus {
+    outline: none;
+    border: 1px solid #EE374A;
+}
+
+.text-input .validation-error {
+    font-weight: 700;
+    font-size: 14px;
+    text-align: right;
+    color: #EE374A;
+
+}
+
+.text-input-header {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 8px 0;
+}

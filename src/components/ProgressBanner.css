@@ -1,0 +1,82 @@
+.progress-banner {
+    background: url('../assets/images/bg-sidebar-desktop.svg') no-repeat;     
+    background-size: contain;
+    color: white;
+    padding: 40px 32px;
+    /* don't hard-code this later */
+    width: 275px;
+    height: 568px;
+}
+
+.section {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 32px;
+}
+
+.section-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #FFFFFF;
+    border-radius: 50%;
+    width: 33px;
+    height: 33px;
+}
+
+.selected .section-number {
+    color: #022959;
+    background: #BEE2FD;
+    border: 1px solid #BEE2FD;
+}
+
+.section-number p {
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.section-description {
+    display: flex;
+    flex-direction: column;
+    margin-left: 16px;
+}
+
+.section-step {
+    font-weight: 400;
+    font-size: 12px;
+    color: #ABBCFF;
+    margin: 0 0 4px 0;
+}
+
+.section-name {
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 1px;
+    color: #FFFFFF;
+    margin: 4px 0 0 0;
+}
+
+
+@media (max-width: 600px) {
+    .progress-banner {
+        background: url('../assets/images/bg-sidebar-mobile.svg') no-repeat;   
+        width: 375px;
+        height: 172px;  
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 0;
+    }
+
+    .section-step, .section-name {
+        display: none;
+    }
+
+    .section {
+        margin-bottom: 0;
+        margin-top: 32px;
+        width: auto;
+    }
+}
