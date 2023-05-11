@@ -1,22 +1,20 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { Section } from './Section';
+import { BillingSlider } from './BillingSlider';
 
 const meta = {
-  title: 'Section',
-  component: Section,
+  title: 'BillingSlider',
+  component: BillingSlider,
   tags: ['autodocs'],
   argTypes: {
     backgroundColor: { control: 'color' },
   },
-} satisfies Meta<typeof Section>;
+} satisfies Meta<typeof BillingSlider>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
   args: {
-    sectionTitle: 'Section Title',
-    description: 'this is the description'
   },
 };

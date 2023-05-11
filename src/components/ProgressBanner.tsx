@@ -12,7 +12,7 @@ export function ProgressBanner() {
         <div className='progress-banner'>
             {sections.map((section, index) => {
                 return (
-                    <div className={`section ${section} selected`}>
+                    <div className={`progress-banner-section ${section} selected`}>
                         <div className='section-number'>
                             <p>{index + 1}</p>
                         </div>

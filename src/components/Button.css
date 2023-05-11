@@ -1,0 +1,31 @@
+.button {
+    font-weight: 500;
+    font-size: 16px;
+    border-radius: 8px;
+    border: none;
+    padding: 14px 24px 16px 24px;
+    width: fit-content;
+}
+
+.button:hover {
+    cursor: pointer;
+}
+
+.button.next {
+    color: #FFFFFF;
+    background: #022959;
+}
+
+.button.confirm {
+    color: #FFFFFF;
+    background: #483EFF;
+}
+
+.button.confirm:hover {
+    background: #928CFF;
+}
+
+.button.back {
+    background: none;
+    color: #9699AA;
+}

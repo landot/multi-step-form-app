@@ -1,0 +1,47 @@
+.plan {
+    width: 138px;
+    height: 160px;
+    background: #FFFFFF;
+    border: 1px solid #D6D9E6;
+    border-radius: 8px;
+    padding: 20px 16px 16px 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.plan img {
+    width: 40px;
+    height: 40px;
+}
+
+.plan h2 {
+    font-weight: 500;
+    font-size: 16px;
+    color: #022959;
+    margin: 0;
+}
+
+.plan .cost {
+    font-weight: 400;
+    font-size: 14px;
+    color: #9699AA;
+    margin: 7px 0 0 0;
+}
+
+.plan .promotion {
+    font-weight: 400;
+    font-size: 12px;
+    color: #022959;
+    margin: 7px 0 0 0;
+}
+
+.plan.selected {
+    background: #F8F9FF;
+    border: 1px solid #483EFF;
+}
+
+
+.plan:hover {
+    border: 1px solid #483EFF;
+}

@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { TextInput } from './TextInput';
 import { Section } from './Section';
 import './PersonalInfoSection.css';
+import { Button } from './Button';
 
 interface ValidationError {
     field: string;
@@ -63,7 +64,10 @@ export function PersonalInfoSection() {
                 <TextInput fieldName='Name' placeholder='e.g. Stephen King' error={getErrorsFor('name')} value={name} handleInputChange={(e) => setName(e.target.value)}/>
                 <TextInput fieldName='Email' placeholder='e.g. stephenking@lorem.com' error={getErrorsFor('email')} value={email} handleInputChange={(e) => setEmail(e.target.value)}/>
                 <TextInput fieldName='Phone' placeholder='e.g. +1 234 567 890' error={getErrorsFor('phone')} value={phone} handleInputChange={(e) => setPhone(e.target.value)}/>
-                <button onClick={handleNextClick}>next</button>
+                <div className='navigation-button'>
+                    <Button onClick={handleNextClick} type='back' message='Back'/>
+                    <Button onClick={handleNextClick} type='next' message='Next Step'/>
+                </div>
             </div>
         </Section>
     )
