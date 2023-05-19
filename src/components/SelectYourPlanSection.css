@@ -1,0 +1,30 @@
+.plan-card-container {
+    display: flex;
+}
+
+.plan-card-container .plan:not(:last-child) {
+    margin-right: 18px;
+}
+
+.select-plan .slider-container {
+    margin-top: 32px;
+}
+
+.select-plan .navigation-button-desktop {
+    margin-top: 110px;
+}
+
+
+@media (max-width: 500px) {
+    .plan-card-container {
+        flex-direction: column;
+    }
+
+    .plan-card-container .plan:not(:last-child) {
+        margin-bottom: 12px;
+    }
+
+    .select-plan .slider-container {
+        margin-top: 24px;
+    }
+}

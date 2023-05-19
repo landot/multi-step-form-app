@@ -48,3 +48,12 @@
     justify-content: space-between;
     margin: 0 0 8px 0;
 }
+
+@media (max-width: 500px) {
+    .text-input p {
+        font-size: 12px;
+    }
+    .text-input input {
+        font-size: 15px;
+    }
+}

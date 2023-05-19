@@ -45,3 +45,17 @@
 .plan:hover {
     border: 1px solid #483EFF;
 }
+
+@media (max-width: 500px) {
+    .plan {
+        width: 100%;
+        flex-direction: row;
+        justify-content: flex-start;
+        height: auto;
+        max-height: 99px;
+    }
+
+    .plan-details {
+        margin-left: 14px;
+    }
+}

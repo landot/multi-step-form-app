@@ -1,5 +1,4 @@
 .add-on {
-    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -56,4 +55,19 @@
     font-weight: 400;
     font-size: 14px;
     color: #483EFF;
+}
+
+@media (max-width: 500px) {
+    .add-on-description h2 {
+        font-size: 14px;
+    }
+
+    .add-on-description p {
+        font-size: 12px;
+    }
+
+    .add-on-cost {
+        font-size: 12px;
+    }
+    
 }

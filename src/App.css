@@ -20,4 +20,14 @@
   font-style: normal;
 }
 
-body { font-family:"Ubuntu", sans-serif; }
+body { 
+  font-family: "Ubuntu", sans-serif; 
+  height: 100vh;
+  background-color: #EFF5FF;
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}

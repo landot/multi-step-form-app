@@ -3,8 +3,7 @@
     background-size: contain;
     color: white;
     padding: 40px 32px;
-    /* don't hard-code this later */
-    width: 275px;
+    width: 274px;
     height: 568px;
 }
 
@@ -58,25 +57,30 @@
 }
 
 
-@media (max-width: 600px) {
+@media (max-width: 500px) {
     .progress-banner {
-        background: url('../assets/images/bg-sidebar-mobile.svg') no-repeat;   
-        width: 375px;
-        height: 172px;  
+        background: url('../assets/images/bg-sidebar-mobile.svg') no-repeat; 
+        background-size: 100% auto;  
         display: flex;
         flex-direction: row;
-        justify-content: center;
         align-items: flex-start;
-        padding: 0;
+        justify-content: center;
+        z-index: 1;
+        position: absolute;
+        width: 100%;
+        height: auto;
+    }
+
+    .banner-wrapper {
+        display: flex;
+        z-index: 15;
+    }
+
+    .progress-banner-section:not(:last-child) {
+        margin-right: 16px;
     }
 
     .section-step, .section-name {
         display: none;
-    }
-
-    .section {
-        margin-bottom: 0;
-        margin-top: 32px;
-        width: auto;
     }
 }

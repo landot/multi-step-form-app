@@ -8,10 +8,14 @@ export function PlanCard(
         plan: string,
         billingType: 'monthly' | 'yearly',
         monthlyCost: number, 
-        annualCost: number
+        annualCost: number,
+        onClick: (plan: string) => void
     }) {
     return (
-        <div className={`plan ${props.plan} ${props.selected ? 'selected': ''}`}>
+        <div 
+            className={`plan ${props.plan}${props.selected ? ' selected': ''}`}
+            onClick={() => props.onClick(props.plan)}    
+        >
             <img src={props.imgUrl} alt={props.imgAlt} />
             <div className='plan-details'>
                 <h2>{props.plan}</h2>

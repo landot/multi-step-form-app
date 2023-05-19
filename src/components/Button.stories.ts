@@ -28,7 +28,6 @@ export const Confirm: Story = {
     },
   };
 
-
   export const GoBack: Story = {
     args: {
       type: 'back',

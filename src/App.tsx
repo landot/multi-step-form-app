@@ -1,44 +1,68 @@
+import { useState } from 'react';
+import { CheckOutSection } from './components/CheckOutSection';
+import { PersonalInfoSection } from './components/PersonalInfoSection'
+import { PickAddOnSection } from './components/PickAddOnSection';
+import { SelectYourPlanSection } from './components/SelectYourPlanSection';
+import { ThankYou } from './components/ThankYou';
 import './App.css'
 
+export interface PersonalInfoData {
+  name: string;
+  email: string;
+  phone: string;
+}
 
-/*
-- progress banner
-  - desktop - left side of screen (use grid?) flex-direction column, numbers with text
-  - mobile - top of screen and flex-direction row, only numbers no text
+export interface Plan {
+  name: string;
+  paymentType: 'monthly' | 'yearly';
+}
 
-- form types:
-  - text input
-    - name
-    - email (with email formatting and empty validation)
-    - phone number (with validation?)
-  - single select for plan type
-    - option for monthly vs yearly 
-  - multi-select for add-ons
-    - checkbox title, text, price
-  
-- summary section:
-  - plan type, add-ons, total cost per plan type (monthly vs yearly)
-
-- misc: 
-  - buttons:
-    - Confirm
-    - Next Step
-    - Go Back
-  - thank you page:
-    - icon, title, text
-
-- functionality
-  - next page button
-  - previous page button
-*/
+export interface Data {
+  personalInfo?: PersonalInfoData;
+  plan?: Plan;
+  addOns?: string[];
+}
 
 function App() {
+  const [step, setStep] = useState(1);
+  const [formData, setFormData] = useState<Data>();
 
-  return (
-    <>
-      <p>asdfasdfasd</p>
-    </>
-  )
+  function handleStep(increment: number) {
+    setStep(prevStep => prevStep + increment);
+  }
+
+  switch(step) {
+    case 1:
+      return (
+        <>
+          <PersonalInfoSection handleStep={handleStep} handleUpdate={setFormData} currentPersonalInfo={formData?.personalInfo}/>
+        </>
+      )
+    case 2:
+      return (
+        <>
+          <SelectYourPlanSection handleStep={handleStep} handleUpdate={setFormData} currentPlan={formData?.plan}/>
+        </>
+      )
+    case 3:
+      return (
+        <>
+          <PickAddOnSection handleStep={handleStep} handleUpdate={setFormData} currentAddOns={formData?.addOns}  paymentType={formData?.plan?.paymentType}/>
+        </>
+      )
+    case 4:
+      return (
+        <>
+          <CheckOutSection handleStep={handleStep} handleUpdate={setFormData} formData={formData}/>
+        </>
+      )
+    case 5:
+      return (
+        <>
+          <ThankYou />
+        </>
+      )
+  }
 }
 
 export default App

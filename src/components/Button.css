@@ -29,3 +29,12 @@
     background: none;
     color: #9699AA;
 }
+
+
+@media (max-width: 500px) {
+    .button {
+        font-size: 14px;
+        padding: 12px 16px 12px 16px;
+        border-radius: 4px;
+    }
+}

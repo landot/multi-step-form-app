@@ -1,0 +1,95 @@
+.check-out {
+    padding: 16px 24px 24px 24px;
+}
+
+
+.check-out hr {
+    margin: 24px 0 16px 0;
+    background: #9699AA;
+    opacity: 0.2;
+}
+
+.check-out-plan-summary {
+    background: #F8F9FF;
+    border-radius: 8px;
+    padding: 16px 24px 0 24px;
+}
+
+.check-out-plan {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.check-out-plan-left h2 {
+    font-weight: 500;
+    font-size: 16px;
+    color: #022959;
+}
+
+.check-out-plan-left button {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    text-decoration-line: underline;
+    color: #9699AA;
+    padding: 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+    margin-top: 7px;
+}
+
+.check-out-plan p {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    color: #022959;
+}
+
+.check-out-add-ons {
+    display: flex;
+    flex-direction: column;
+}
+
+.check-out-add-ons div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.check-out-add-ons div:not(:last-child) {
+    margin-bottom: 16px;
+}
+
+.check-out-add-ons div:last-child {
+    margin-bottom: 24px;
+}
+
+.check-out-total {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 24px 0 24px;
+    margin-top: 24px;
+}
+
+.check-out-add-ons .check-out-add-on-name, .check-out-total .check-out-total-text {
+    font-weight: 400;
+    font-size: 14px;
+    color: #9699AA;
+}
+
+.check-out-add-ons .check-out-add-on-cost {
+    font-weight: 400;
+    font-size: 14px;
+    color: #022959;
+}
+
+.check-out-total .check-out-total-cost {
+    font-weight: 700;
+    font-size: 20px;
+    color: #483EFF;
+}
+
+@media (max-width: 500px) {
+    
+}

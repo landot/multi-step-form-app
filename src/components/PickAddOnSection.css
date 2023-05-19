@@ -1,0 +1,13 @@
+.add-on-section {
+    width: 100%;
+}
+
+.add-on-section .add-on:not(:last-child) {
+    margin-bottom: 16px;
+}
+
+@media (max-width: 500px) {
+    .add-on-section .add-on:not(:last-child) {
+        margin-bottom: 12px;
+    }
+}

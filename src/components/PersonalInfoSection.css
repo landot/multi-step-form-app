@@ -4,20 +4,26 @@
     flex-direction: column;
 }
 
-.personal-info input {
+.personal-info .text-input:not(:last-child) {
     margin-bottom: 24px;
 }
 
-.personal-info .navigation-button {
+.personal-info .navigation-button-desktop {
     display: flex;
     justify-content: space-between;
     margin-top: 90px;
 }
 
-.personal-info .navigation-button .back {
+.personal-info .navigation-button-desktop .back {
     visibility: hidden;
 }
 
-.personal-info .navigation-button .next {
+.personal-info .navigation-button-desktop .next {
     align-self: flex-end;
+}
+
+@media (max-width: 500px) {
+    .personal-info .text-input:not(:last-child) {
+        margin-bottom: 16px;
+    }
 }

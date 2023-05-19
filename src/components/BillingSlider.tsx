@@ -1,31 +1,18 @@
-import { useState } from 'react';
 import './BillingSlider.css';
 
-export function BillingSlider() {
-    const [paymentType, setPaymentType] = useState<'monthly' | 'annual'>('monthly');
-
-    function handleToggle() {
-        setPaymentType(prev => {
-            if(prev === 'monthly') {
-                return 'annual'
-            } else {
-                return 'monthly'
-            }
-        })
-    }
-
+export function BillingSlider(props: {paymentType: string, handleClick: () => void}) {
     return (
         <div className='slider-container'>
-            <p className={paymentType === 'monthly' ? 'active': ''}>Monthly</p>
+            <p className={props.paymentType === 'monthly' ? 'active': ''}>Monthly</p>
             <label className="switch">
                  <input 
                     type="checkbox" 
-                    checked={paymentType === 'annual'}
+                    checked={props.paymentType === 'yearly'}
                     onChange={() => null}
                 />
-                <span className="slider round" onClick={handleToggle}></span>
+                <span className="slider round" onClick={props.handleClick}></span>
             </label>
-            <p className={paymentType === 'annual' ? 'active': ''}>Yearly</p>
+            <p className={props.paymentType === 'yearly' ? 'active': ''}>Yearly</p>
         </div>
     )
 }
