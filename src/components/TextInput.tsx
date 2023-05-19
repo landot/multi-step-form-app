@@ -1,6 +1,13 @@
 import './TextInput.css';
 
-export function TextInput(props: {fieldName: string, placeholder: string, error: string, value: string, handleInputChange: (e) => void}) {
+export function TextInput(
+    props: {
+        fieldName: string, 
+        placeholder: string,
+        error: string, 
+        value: string, 
+        handleInputChange: (e: React.ChangeEvent<HTMLInputElement>) => void
+    }) {
     return (
         <div className={`text-input${props.error ? ' error' : ''}`}>
             <div className='text-input-header'>

@@ -6,9 +6,7 @@ const meta = {
   title: 'AddOn',
   component: AddOn,
   tags: ['autodocs'],
-  argTypes: {
-    backgroundColor: { control: 'color' },
-  },
+  argTypes: {},
 } satisfies Meta<typeof AddOn>;
 
 export default meta;
@@ -18,9 +16,10 @@ export const YearlyAddon: Story = {
   args: {
     name: 'Online service',
     description: 'Access to multiplayer games',
-    billingType: 'yearly',
+    paymentType: 'yearly',
     monthlyCost: 1,
-    annualCost: 10
+    annualCost: 10,
+    selected: true
   },
 };
 
@@ -28,8 +27,9 @@ export const MonthlyAddon: Story = {
   args: {
     name: 'Online service',
     description: 'Access to multiplayer games',
-    billingType: 'monthly',
+    paymentType: 'monthly',
     monthlyCost: 1,
-    annualCost: 10
+    annualCost: 10,
+    selected: true
   },
 };

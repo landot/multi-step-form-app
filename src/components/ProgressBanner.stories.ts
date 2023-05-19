@@ -6,9 +6,7 @@ const meta = {
   title: 'ProgressBanner',
   component: ProgressBanner,
   tags: ['autodocs'],
-  argTypes: {
-    backgroundColor: { control: 'color' },
-  },
+  argTypes: {},
 } satisfies Meta<typeof ProgressBanner>;
 
 export default meta;
@@ -16,5 +14,6 @@ type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
   args: {
+    step: 1
   },
 };

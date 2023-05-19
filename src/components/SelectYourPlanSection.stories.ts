@@ -6,9 +6,7 @@ const meta = {
   title: 'SelectYourPlanSection',
   component: SelectYourPlanSection,
   tags: ['autodocs'],
-  argTypes: {
-    backgroundColor: { control: 'color' },
-  },
+  argTypes: {},
 } satisfies Meta<typeof SelectYourPlanSection>;
 
 export default meta;

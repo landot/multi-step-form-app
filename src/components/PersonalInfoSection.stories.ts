@@ -6,15 +6,12 @@ const meta = {
   title: 'PersonalInfoSection',
   component: PersonalInfoSection,
   tags: ['autodocs'],
-  argTypes: {
-    backgroundColor: { control: 'color' },
-  },
+  argTypes: {},
 } satisfies Meta<typeof PersonalInfoSection>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
-  args: {
-  },
+  args: {},
 };

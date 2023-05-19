@@ -1,20 +1,17 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { CheckOut } from './CheckOutSection';
+import { CheckOutSection } from './CheckOutSection';
 
 const meta = {
-  title: 'CheckOut',
-  component: CheckOut,
+  title: 'CheckOutSection',
+  component: CheckOutSection,
   tags: ['autodocs'],
-  argTypes: {
-    backgroundColor: { control: 'color' },
-  },
-} satisfies Meta<typeof CheckOut>;
+  argTypes: {},
+} satisfies Meta<typeof CheckOutSection>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
-  args: {
-  },
+  args: {},
 };

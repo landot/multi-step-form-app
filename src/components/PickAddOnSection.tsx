@@ -9,8 +9,8 @@ export function PickAddOnSection(
     props: {
         handleStep: (num: number) => void,
         handleUpdate: (obj: object) => void,
-        currentAddOns: string[],
-        paymentType: 'monthly' | 'yearly'
+        currentAddOns?: string[],
+        paymentType?: 'monthly' | 'yearly'
     }) {
     const [addOns, setAddOns] = useState<string[]>(props.currentAddOns || []);
 
@@ -49,7 +49,7 @@ export function PickAddOnSection(
                             <AddOn 
                                 name={addOn.name} 
                                 description={addOn.description} 
-                                paymentType={props.paymentType} 
+                                paymentType={props.paymentType || 'monthly'} 
                                 monthlyCost={addOn.monthlyCost} 
                                 annualCost={addOn.annualCost} 
                                 selected={addOns.includes(addOn.name)}

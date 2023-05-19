@@ -8,7 +8,7 @@ export function AddOn(props: {
     monthlyCost: number, 
     annualCost: number,
     selected: boolean,
-    setAddOns: (addOns: string[]) => void
+    setAddOns: (addOns: any) => void
 }) {
     const [selected, setSelected] = useState(props.selected);
 

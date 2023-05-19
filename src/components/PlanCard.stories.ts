@@ -7,9 +7,7 @@ const meta = {
   title: 'PlanCard',
   component: PlanCard,
   tags: ['autodocs'],
-  argTypes: {
-    backgroundColor: { control: 'color' },
-  },
+  argTypes: {},
 } satisfies Meta<typeof PlanCard>;
 
 export default meta;

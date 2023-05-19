@@ -9,7 +9,7 @@ export function CheckOutSection(
     props: {
         handleStep: (num: number) => void,
         handleUpdate: (obj: object) => void,
-        formData: Data
+        formData?: Data
     }) {
     
     function handleNextClick() {
@@ -25,29 +25,29 @@ export function CheckOutSection(
     }
 
     function getPlanCost(): number {
-        const plan = plans.filter(plan => plan.name === props.formData.plan?.name)[0];
-        return props.formData.plan?.paymentType === 'monthly' ? plan.monthlyCost: plan.annualCost;
+        const plan = plans.filter(plan => plan.name === props.formData?.plan?.name)[0];
+        return props.formData?.plan?.paymentType === 'monthly' ? plan.monthlyCost: plan.annualCost;
     }
 
     function getAddOnCost(addOn: string): number {
         const currentAddOn = addOnData.filter(a => {
             return a.name === addOn
         });
-        return props.formData.plan?.paymentType === 'monthly' ? currentAddOn[0].monthlyCost: currentAddOn[0].annualCost
+        return props.formData?.plan?.paymentType === 'monthly' ? currentAddOn[0].monthlyCost: currentAddOn[0].annualCost
     }
 
     function getShortenedPaymentString(): string {
-        return props.formData.plan?.paymentType === 'monthly'? 'mo': 'yr';
+        return props.formData?.plan?.paymentType === 'monthly'? 'mo': 'yr';
     }
 
     function getPaymentString(): string {
-        return props.formData.plan?.paymentType === 'monthly'? 'month': 'year';
+        return props.formData?.plan?.paymentType === 'monthly'? 'month': 'year';
     }
 
     function calculateTotal(): number {
         let total = 0;
         total += getPlanCost();
-        props.formData.addOns?.map(addOn => total += getAddOnCost(addOn));
+        props.formData?.addOns?.map(addOn => total += getAddOnCost(addOn));
         return total;
     }
 
@@ -62,14 +62,14 @@ export function CheckOutSection(
                     <div className='check-out-plan-summary'>
                         <div className='check-out-plan'>
                             <div className='check-out-plan-left'>
-                                <h2>{props.formData.plan?.name} ({props.formData.plan?.paymentType})</h2>
+                                <h2>{props.formData?.plan?.name} ({props.formData?.plan?.paymentType})</h2>
                                 <button onClick={handleChangePlan}>Change</button>
                             </div>
                             <p>${getPlanCost()}/{getShortenedPaymentString()}</p>
                         </div>
                         <hr />
                         <div className='check-out-add-ons'>
-                            {props.formData.addOns?.map((addOn: string) => {
+                            {props.formData?.addOns?.map((addOn: string) => {
                                 return (
                                     <div>
                                         <p className='check-out-add-on-name'>{addOn}</p>

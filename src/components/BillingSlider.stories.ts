@@ -6,9 +6,7 @@ const meta = {
   title: 'BillingSlider',
   component: BillingSlider,
   tags: ['autodocs'],
-  argTypes: {
-    backgroundColor: { control: 'color' },
-  },
+  argTypes: {},
 } satisfies Meta<typeof BillingSlider>;
 
 export default meta;
@@ -16,5 +14,6 @@ type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
   args: {
+    paymentType: 'monthly'
   },
 };

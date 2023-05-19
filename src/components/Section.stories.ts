@@ -6,9 +6,7 @@ const meta = {
   title: 'Section',
   component: Section,
   tags: ['autodocs'],
-  argTypes: {
-    backgroundColor: { control: 'color' },
-  },
+  argTypes: {},
 } satisfies Meta<typeof Section>;
 
 export default meta;

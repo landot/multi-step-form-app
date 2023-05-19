@@ -62,6 +62,12 @@ function App() {
           <ThankYou />
         </>
       )
+    default:
+      return (
+        <>
+          <PersonalInfoSection handleStep={handleStep} handleUpdate={setFormData} currentPersonalInfo={formData?.personalInfo}/>
+        </>
+      )
   }
 }
 
